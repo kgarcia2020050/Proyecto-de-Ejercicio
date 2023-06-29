@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "21411cab-22d7-4c92-aa67-f26f3d31a007",
+		"name": "Proyecto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Facturas",
+			"item": [
+				{
+					"name": "Ver todas las facturas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/facturas/verFacturas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"verFacturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar Factura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nit\":\"0987654321123\",\r\n    \"nombre\":\"Gerardo Lemus\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/facturas/guardarFactura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"guardarFactura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver una factura",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/facturas/verFactura?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"verFactura"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver facturas con un mismo nit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/facturas/verFacturasNit?nit=0987654321123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"verFacturasNit"
+							],
+							"query": [
+								{
+									"key": "nit",
+									"value": "0987654321123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar factura por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/facturas/borrarFactura?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"borrarFactura"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar facturas por nit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/facturas/borrarFacturasNit?nit=0987654321123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"borrarFacturasNit"
+							],
+							"query": [
+								{
+									"key": "nit",
+									"value": "0987654321123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar factura",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n            \"id\": 1,\r\n            \"nit\": \"1234567890123\",\r\n            \"nombre\": \"Kenneth Garcia Lemus\",\r\n            \"fecha\": \"2023-06-27\",\r\n            \"correlativo\": 0\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/facturas/editarFactura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturas",
+								"editarFactura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver detalle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/detalle/verDetalle?idDetalle=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle",
+								"verDetalle"
+							],
+							"query": [
+								{
+									"key": "idDetalle",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver detalles de factura",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/detalle/verDetallesFactura?idFactura=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle",
+								"verDetallesFactura"
+							],
+							"query": [
+								{
+									"key": "idFactura",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar detalles",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/detalle/eliminarDetalle?idDetalle=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle",
+								"eliminarDetalle"
+							],
+							"query": [
+								{
+									"key": "idDetalle",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar detalles de factura",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/detalle/eliminarDetalles?facturaId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle",
+								"eliminarDetalles"
+							],
+							"query": [
+								{
+									"key": "facturaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar detalles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"producto\":\"Leche\",\r\n    \"cantidad\":2,\r\n    \"precioProducto\":10\r\n},{\r\n    \"producto\":\"Huevos\",\r\n    \"cantidad\":2,\r\n    \"precioProducto\":10\r\n},{\r\n    \"producto\":\"Salchichas\",\r\n    \"cantidad\":4,\r\n    \"precioProducto\":0.25\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/detalle/guardarDetalle?idFactura=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle",
+								"guardarDetalle"
+							],
+							"query": [
+								{
+									"key": "idFactura",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
